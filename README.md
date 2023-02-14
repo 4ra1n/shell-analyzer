@@ -23,6 +23,10 @@
 
 远程查杀演示视频：https://www.bilibili.com/video/BV1L24y1q7so
 
+本工具的一些介绍：
+- [内存马检测工具shell-analyzer（1）最初版展示与设计思路](https://mp.weixin.qq.com/s/vb0WlgylO7jnbpfh8YnNXQ)
+- [内存马检测工具shell-analyzer（2）远程查杀实现](https://mp.weixin.qq.com/s/vJAZRtP5DW-CHjGKLX3GrQ)
+
 ### 原理
 
 将`Agent`动态`Attach`到目标后会开启一个端口(10032)监听：
