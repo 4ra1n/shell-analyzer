@@ -19,6 +19,10 @@
 
 ![](img/0000.jpg)
 
+本地查杀演示视频：https://www.bilibili.com/video/BV1ZM411e7Rr
+
+远程查杀演示视频：https://www.bilibili.com/video/BV1L24y1q7so
+
 ### 原理
 
 将`Agent`动态`Attach`到目标后会开启一个端口(10032)监听：
