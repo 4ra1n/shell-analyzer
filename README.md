@@ -4,6 +4,8 @@
 ![](https://img.shields.io/github/downloads/4ra1n/shell-analyzer/total)
 ![](https://img.shields.io/github/v/release/4ra1n/shell-analyzer)
 
+**注意：请勿在生产环境使用，存在打崩业务的风险，目前适用于自己搭建靶机分析学习**
+
 ### 介绍
 
 关于`Java Web`内存马查杀的文章和工具已经有不少，不过大都不够完善，各有缺点；
@@ -15,8 +17,6 @@
 - 一键反编译分析代码
 - 一键查杀内存马
 
-**注意：请勿在生产环境使用，存在打崩业务的风险，目前适用于自己搭建靶机分析学习**
-
 ![](img/0000.jpg)
 
 ### 原理
@@ -24,6 +24,7 @@
 将`Agent`动态`Attach`到目标后会开启一个端口(10032)监听：
 - 该端口会反序列化收到的数据，然后处理，我已经给反序列化设置了白名单进行保护
 - 启动`Agent`时会设置密码，如果客户端连接密码不匹配将无法获得数据
+- 为什么选择 10032 端口，因为这个数字代表一个
 
 ![](img/0005.png)
 
@@ -146,7 +147,7 @@ scp /your-path/remote.jar root@ip:/remote.jar
 scp /your-path/filter.jsp root@ip:/apache-tomcat-9.0.71/webapps/ROOT/1.jsp
 ```
 
-访问`http://10.14`
+访问`http://ip:port/1.jsp`注入并测试`http://ip:port?cmd=xxx`
 
 先使用`jps`拿到`PID`然后注入`Agent`
 
