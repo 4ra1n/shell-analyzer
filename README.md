@@ -54,8 +54,8 @@
 
 提供了三个`jar`文件：
 - `agent.jar`是核心文件，请保持与`gui.jar`或`remote.jar`同目录
-- `gui.jar`是客户端，直接启动即可（注意必须是`JDK`不能是`JRE`）
-- `remote.jar`用于远程和`Docker`分析，本地分析无需
+- `gui.jar`是GUI客户端，本地和远程分析都需要
+- `remote.jar`用于远程分析，本地分析无需下载
 
 注意使用`JDK\bin\java.exe`启动并添加`tools.jar`到`classpath`中
 
@@ -107,7 +107,9 @@ Mac OS 示例：
 
 仅测试了`JDK`版本为8的情况
 
-客户端直接`java -jar gui.jar`即可
+客户端`java -jar gui.jar`即可
+
+（因为不对本地分析，仅用于发送和接收socket数据，所以可以不将`tools.jar`加入`classpath`）
 
 服务端确保`Tomcat`端口和 10032 端口开放
 
