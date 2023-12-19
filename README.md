@@ -6,6 +6,8 @@
 
 **注意：请勿在生产环境使用，存在打崩业务的风险，目前适用于自己搭建靶机分析学习**
 
+# 已集成到 jar-analyzer 中 https://github.com/jar-analyzer/jar-analyzer
+
 ### 介绍
 
 关于`Java Web`内存马查杀的文章和工具已经有不少，不过大都不够完善，各有缺点；
